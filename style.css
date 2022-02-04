@@ -35,13 +35,12 @@ h3 {
     font-size: 1.9rem;
 }
 
-img {
+.profile {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
     margin-top: 4rem;
-    margin-bottom: 5rem;
 }
 
 a {
@@ -62,6 +61,18 @@ p, li {
 }
 
 section {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-top: 6rem;
+}
+
+img {
+    display: block;
+    width: 60%;
+}
+
+.space {
+    margin-top: 5.5rem;
+}
+
+.footer {
+    margin-bottom: 5rem;
 }
