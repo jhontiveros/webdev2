@@ -8,8 +8,8 @@
 
 :root {
     --color-pri: blue;
-    --color-sec: salmon;
-    --color-acc: red;
+    --color-sec: pink;
+    --color-acc: rgb(94, 255, 107);
 
     --font-header: 'Playfair Display', serif;
     --font-paragraph: 'DM Sans', sans-serif;
@@ -24,20 +24,88 @@ header {
 .topnav {
     margin: auto;
     padding: 1rem;
+
+    padding-top: 2rem;
+
+    max-width: 90ch;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-header);
+    font-weight: 700;
 }
 
 h2 {
-    font-family: var(--font-header);
-    font-weight: 400;
+    font-size: 2.5rem;
 }
 
 nav {
     display: block;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 a {
     color: var(--color-acc);
     font-family: var(--font-paragraph);
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    padding-right: 1rem;
 }
 
+a:hover {
+    color: var(--color-sec);
+}
+
+main {
+    background: var(--color-sec);
+}
+
+.body {
+    margin: auto;
+    padding: 1rem;
+    display: block;
+
+    max-width: 90ch;
+}
+
+h1 {
+    color: var(--color-pri);
+
+    font-size: 2.9rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    color: var(--color-pri);
+
+    font-family: var(--font-paragraph);
+    font-size: 1.3rem;
+    margin-top: .5rem;
+}
+
+section {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    color: var(--color-pri);
+    font-size: 1.5rem;
+
+}
+
+.ftitle {
+    color: var(--color-sec);
+}
+
+footer {
+    color: var(--color-sec);
+    background: var(--color-pri);
+
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
