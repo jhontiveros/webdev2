@@ -13,19 +13,15 @@
     --font-weight: 700;
 }
 
-body {
-    height: 100vh;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
     
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
 
-    padding-top: 1.5vw;
-    padding-bottom: 1.5vw;
+    padding-top: 1.7vw;
+    padding-bottom: 1.7vw;
 }
 
 button {
@@ -42,6 +38,22 @@ button {
     letter-spacing: -0.25px;
 
     text-transform: uppercase;
+}
+
+main {
+    height: 80vh;
+}
+
+.video-container {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+video {
+    min-height: 100%;
+
+    
 }
 
 a {
