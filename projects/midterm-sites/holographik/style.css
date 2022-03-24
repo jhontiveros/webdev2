@@ -10,13 +10,15 @@
     --font-pri: 'Pragati Narrow', sans-serif;
     --font-sec: 'Montserrat', sans-serif;
     --font-color: white;
-    --fontsize-h1: 3rem;
-    --fontsize-h2: 2rem;
-    --fontsize-h3: 1rem;
 
     --font-bold: 700;
     --font-med: 500;
     --font-reg: 400;
+}
+
+body {
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 header {
@@ -26,9 +28,6 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-
-    padding-left: 2em;
-    padding-right: 2em;
 
     padding-top: 1.3em;
     padding-bottom: 1.3em;
@@ -43,11 +42,19 @@ nav {
     background-color: white;
     mix-blend-mode: difference;
     border-radius: 10px;
-    width: .5em;
-    height: .5em;
+    width: .4em;
+    height: .4em;
 
     margin-right: .25em;
+
+    animation: blink 1s infinite;
 }
+
+@keyframes blink {
+    0%    { opacity: 1; }
+    50%   { opacity: 0; }
+    100%  { opacity: 1; }
+  }
 
 h1, h3 {
     font-family: var(--font-pri);
@@ -77,8 +84,7 @@ a {
 }
 
 main {
-    padding-left: 2em;
-    padding-right: 2em;
+
 }
 
 video {
@@ -96,30 +102,24 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding-top: 50vh;
 }
 
 h1 {
-    font-size: 16.5vw;
+    font-size: 17vw;
     line-height: .8em;
-
-    mix-blend-mode: difference;
-    color: var(--font-color);
+    text-align: center;
 }
 
 h2 {
-    font-family: var(--font-pri);
-    font-weight: var(--font-reg);
+    font-family: var(--font-sec);
+    font-weight: var(--font-med);
+    font-size: clamp(1.3rem, 3.1vw, 3.1rem);
+
     mix-blend-mode: difference;
     color: var(--font-color);
-    font-size: 2.5rem;
-
     text-transform: uppercase;
     text-align: center;
+    line-height: 1em;
 
-    line-height: .9em;
-
-    padding-left: 2.1em;
-    padding-right: 2.1em;
+    
 }
