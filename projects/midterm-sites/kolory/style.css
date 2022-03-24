@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,5 +7,52 @@
 }
 
 :root {
-    --font-default: 
+    --font-default: 'Montserrat', sans-serif;
+    --font-color: black;
+    --font-size: 1rem;
+    --font-weight: 700;
+}
+
+body {
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+
+    font-family: var(--font-default);
+    color: var(--font-color);
+
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    letter-spacing: -0.25px;
+
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+
+    font-family: var(--font-default);
+    color: var(--font-color);
+
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    letter-spacing: -0.25px;
+
+    text-transform: uppercase;
 }
