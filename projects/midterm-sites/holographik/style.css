@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Pragati+Narrow:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-pri: 'Pragati Narrow', sans-serif;
+    --font-sec: 'Montserrat', sans-serif;
+    --font-color: black;
+    --fontsize-h1: 3rem;
+    --fontsize-h2: 2rem;
+    --fontsize-h3: 1rem;
+
+    --font-bold: 700;
+    --font-med: 500;
+    --font-reg: 400;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    padding-top: 1.3em;
+    padding-bottom: 1.3em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.blink {
+    background-color: green;
+    border-radius: 10px;
+    width: .5em;
+    height: .5em;
+
+    margin-right: .25em;
+}
+
+h3 {
+    font-family: var(--font-pri);
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+a {
+    font-family: var(--font-sec);
+    font-weight: var(--font-med);
+    font-size: 1.1rem;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+    padding-left: 3em;
+    color: var(--font-color);
+}
