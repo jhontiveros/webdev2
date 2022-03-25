@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/food/foo-6/foo515.cur), auto !important;} /* End https://www.cursors-4u.com */
+
 :root {
     --font-pri: 'Pragati Narrow', sans-serif;
     --font-sec: 'Montserrat', sans-serif;
