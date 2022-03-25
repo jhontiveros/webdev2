@@ -5,30 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>KOLORY</title>
 </head>
 <body>
     <header>
         <nav>
-           <button>about</button>
-           <button>contact</button>
+           <button onclick="onAboutClicked()">about</button>
+           <button onclick="onContactClicked()">contact</button>
         </nav>
     </header>
 
     <main>
         <div class="video-container">
-           <video autoplay muted>
+           <video autoplay loop muted>
                 <source src="media/jojo_amv.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="about"></div>
-        <div class="contact"></div>
-        <div class="logo"></div>
+
+        <div class="about-container hidden" id="about">
+            <div class="content">
+                <h1>this is a midterm project for web dev 2</h1>
+                <h1>click on the "x" to leave</h1>
+                <button onclick="onXClicked()"><h2>X</h2></button>
+            </div>
+        </div>
+
+        <div class="contact-container hidden" id="contact" >
+            <div class="content">
+                <h1>the original website is at</h1>
+                <a href="https://kolory.co/">kolory.co</a>
+                <button onclick="onXClicked()"><h2>X</h2></button>
+            </div>
+        </div>
+        
+        <div class="logo">
+            <img src="/kolory/media/kolorylogo.svg" alt="">
+        </div>
     </main>
 
     <footer>
         <nav>
-            <a href="#">jojos amv</a>
+            <a href="https://www.youtube.com/watch?v=9rGKllnbJz0&ab_channel=Novani">jojos amv</a>
             <a href="/holographik/index.html">holographik</a>
         </nav>
     </footer>

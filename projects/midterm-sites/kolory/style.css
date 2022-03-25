@@ -87,3 +87,80 @@ footer {
     align-items: center;
 }
 
+.logo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+    position: absolute;
+    top: 15vh;
+}
+
+img {
+    height: 25vh;
+    position: relative;
+}
+
+.about-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+    position: absolute;
+    top: 15vh;
+
+    z-index: 1;
+}
+
+.contact-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+    position: absolute;
+    top: 15vh;
+
+    z-index: 1;
+}
+
+.content {
+    background-color: white;
+    width: 70vw;
+    max-width: 600px;
+    height: 40vh;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--font-default);
+    color: var(--font-color);
+
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+
+    text-transform: uppercase;
+
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-family: var(--font-default);
+    font-size: 2.3rem;
+}
+
+.hidden {
+    display: none !important;
+}
