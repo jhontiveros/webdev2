@@ -17,12 +17,11 @@
 }
 
 header {
-    border: 2px solid green;
     position: relative;
     width: 100vw;
     height: 10vh;
 
-    padding: 1.7em;
+    padding: 1.7vw;
 }
 
 nav {
@@ -79,7 +78,7 @@ a {
     text-decoration: underline;
     text-decoration-thickness: 2px;
 
-    padding-left: 3em;
+    padding-left: 6em;
     mix-blend-mode: difference;
     color: var(--font-color);
 }
@@ -96,11 +95,10 @@ video {
 }
 
 main {
-    border: 2px solid green;
     width: 100vw;
     height: 90vh;
 
-    padding: 1.7em;
+    padding: 1.7vw;
     padding-bottom: 13vh;
 
     display: flex;
@@ -115,7 +113,7 @@ main {
 }
 
 h1 {
-    font-size: 16.6vw;
+    font-size: 17vw;
     line-height: .8em;
     text-align: center;
 }
@@ -133,4 +131,29 @@ h2 {
 
     padding-left: 10vw;
     padding-right: 10vw;
+}
+
+@media (min-width: 1440px) {
+    header {
+        padding-top: .5vw;
+        padding-left: 1.7vw;
+        padding-right: 1.7vw;
+    }
+
+    a {
+        font-size: .9rem;
+        font-weight: var(--font-reg);
+
+        text-decoration-thickness: 1px;
+        padding-left: 14em;
+        padding-top: .5em;
+    }
+
+    main {
+        padding-bottom: 7vh;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }
