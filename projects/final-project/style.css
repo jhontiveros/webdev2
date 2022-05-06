@@ -37,12 +37,12 @@ header, footer {
 
 h1 {
     font-family: var(--h1-font);
-    margin-top: -6rem;
+    margin-top: -5.5rem;
 }
 
 h2, h3 {
     font-family: var(--h2-font);
-    color: #a3a4a7;
+    color: #b7b7b9;
 }
 
 h2 {
@@ -55,8 +55,6 @@ h3 {
     letter-spacing: 4px;
     font-size: 1rem;
     font-weight: 400;
-
-    margin-top: 4rem;
 }
 
 .neon {
@@ -77,7 +75,7 @@ h3 {
 }
 
 .neon span {
-    animation: flicker 800ms;
+    animation: flicker 4000ms;
 }
 
 .neon .delay1 {
@@ -87,14 +85,48 @@ h3 {
 
 @keyframes flicker {
     0% {opacity: 0;}
-    10% {opacity: 1;}
-    20% {opacity: 0;}
-    40% {opacity: 1;}
-    50% {opacity: 0;}
-    600% {opacity: 1;}
-    80% {opacity: 0;}
-    100% {opacity: 1;}
+    2% {opacity: 1;}
+    4% {opacity: 0;}
+    8% {opacity: 1;}
+    10% {opacity: 0;}
+    12% {opacity: 1;}
+    16% {opacity: 0;}
+    20% {opacity: 1;}
 }
+
+.b-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.scroll-mouse {
+    width: 32px;
+    height: 56px;
+    border: 2px solid #b7b7b9;
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .mouse-point {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 6px;
+    background-color: #b7b7b9;
+    animation: mousemove 2.5s infinite;
+  }
+  
+  @keyframes mousemove {
+    from {top: 10px;opacity:0;}
+    to {top: 44px;opacity:1;}
+  }
 
 .p-container {
     position: relative;
