@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Work+Sans:wght@300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --h1-font: 'Bad Script', cursive;
+    --h2-font: 'Work Sans', sans-serif;
 }
 
 main {
@@ -14,7 +21,79 @@ main {
 header, footer {
     width: 100vw;
     height: 100vh;
-    border: 10px solid red;
+    background-color: rgb(1, 0, 36);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--h1-font);
+    margin-top: -6rem;
+}
+
+h2, h3 {
+    font-family: var(--h2-font);
+    color: #a3a4a7;
+}
+
+h2 {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+
+    margin-top: 4rem;
+}
+
+.neon {
+    font-size: 10rem;
+    text-align: center;
+    letter-spacing: 7px;
+    color: white;
+
+    text-shadow: 
+    0 0 5px #f0ef7d,
+    0 0 10px #f0ef7d,
+    0 0 20px #f2c403,
+    0 0 40px #f2c403,
+    0 0 80px #f2c403,
+    0 0 90px #f2c403,
+    0 0 100px #cb810c,
+    0 0 150px #cb810c;
+}
+
+.neon span {
+    animation: flicker 800ms;
+}
+
+.neon .delay1 {
+    animation-delay: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    20% {opacity: 0;}
+    40% {opacity: 1;}
+    50% {opacity: 0;}
+    600% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .p-container {
