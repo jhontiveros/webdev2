@@ -31,8 +31,8 @@
             <div class="sticky">
                 <div class="horizontal">
                     <ul role="feed" class="playlist">
-                        <div class="a-container">
-                            <img class="vinyl" src="media/vinyl.png" alt="">
+                        <div class="a-container" onclick="onAlbumClick('augh')">
+                            <img class="vinyl" src="media/vinyl.png" alt="" id="aughVinyl">
                             <img class="album" src="media/vinyl album.jpeg" alt="">
                         </div>
                         <div class="a-container">
@@ -54,5 +54,14 @@
     </main>
 
     <footer></footer>
+
+    <audio loop autoplay id="bgm">
+        <source src="media/bg.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="augh">
+        <source src="media/ben-w.mp3" type="audio/mp3">
+    </audio>
+
 </body>
 </html>

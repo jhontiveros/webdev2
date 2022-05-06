@@ -131,7 +131,7 @@ main {
     position: relative;
     width: 100%; 
     min-height: 100vh;
-    border: 10px solid green;
+    background-color: rgb(1, 0, 36);
 }
 
 .p-container {
@@ -168,7 +168,6 @@ ul {
     position: relative;
     height: 50%;
     width: 500px;
-    outline: 2px solid blue;
     margin-right: 50px;
     flex-shrink: 0;
 }
@@ -198,6 +197,10 @@ ul {
     animation: slide-out 0.5s forwards;
   }
 
+  .rotate {
+    animation: rotation 2s infinite linear;
+  }
+
   @keyframes slide-in {
     0% { transform: translateX(0px); }
     100% { transform: translateX(120px); }
@@ -206,4 +209,13 @@ ul {
 @keyframes slide-out {
     0% { transform: translateX(120px); }
     100% { transform: translateX(0px); }
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
 }
