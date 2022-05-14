@@ -31,21 +31,24 @@
             <div class="sticky">
                 <div class="horizontal">
                     <ul role="feed" class="playlist">
-                        <div class="a-container" onclick="onAlbumClick('augh')">
+                        <div class="a-container" id="jazz_1"
+                        onmouseenter="onAlbumMouseEnter(this)" onmouseleave="onAlbumMouseLeave(this)" onclick="onAlbumClicked(this)">
                             <img class="vinyl" src="media/vinyl.png" alt="" id="aughVinyl">
-                            <img class="album" src="media/vinyl album.jpeg" alt="">
+                            <img class="album" src="media/1.jpeg" alt="">
                         </div>
-                        <div class="a-container">
+                        <div class="a-container" id="jazz_2"
+                        onmouseenter="onAlbumMouseEnter(this)" onmouseleave="onAlbumMouseLeave(this)" onclick="onAlbumClicked(this)">
                             <img class="vinyl" src="media/vinyl.png" alt="">
-                            <img class="album" src="media/vinyl album.jpeg" alt="">
+                            <img class="album" src="media/2.jpeg" alt="">
                         </div>
-                        <div class="a-container">
+                        <div class="a-container" id="jazz_3"
+                        onmouseenter="onAlbumMouseEnter(this)" onmouseleave="onAlbumMouseLeave(this)" onclick="onAlbumClicked(this)">
                             <img class="vinyl" src="media/vinyl.png" alt="">
-                            <img class="album" src="media/vinyl album.jpeg" alt="">
+                            <img class="album" src="media/3.jpeg" alt="">
                         </div>
-                        <div class="a-container">
+                        <div class="a-container" id="jazz_4"                  onmouseenter="onAlbumMouseEnter(this)" onmouseleave="onAlbumMouseLeave(this)" onclick="onAlbumClicked(this)">
                             <img class="vinyl" src="media/vinyl.png" alt="">
-                            <img class="album" src="media/vinyl album.jpeg" alt="">
+                            <img class="album" src="media/4.jpg" alt="">
                         </div>
                     </ul>
                 </div>
@@ -53,14 +56,27 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="f-container">
+            <img src="media/thats_all.gif" alt="a thanks gif">
+            <h3>THANK YOU & GOODNIGHT</h3>
+        </div>
+    </footer>
 
-    <audio loop autoplay id="bgm">
-        <source src="media/bg.mp3" type="audio/mp3">
+    <audio id="jazz_1-audio">
+        <source src="media/jazz_1.mp3" type="audio/mp3">
     </audio>
 
-    <audio id="augh">
-        <source src="media/ben-w.mp3" type="audio/mp3">
+    <audio id="jazz_2-audio">
+        <source src="media/jazz_2.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="jazz_3-audio">
+        <source src="media/jazz_3.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="jazz_4-audio">
+        <source src="media/jazz_4.mp3" type="audio/mp3">
     </audio>
 
 </body>

@@ -1,4 +1,4 @@
-var augh = null
+var activeAlbum = null
 
 function calcDynamicHeight(ref) {
     const vw = window.innerWidth
@@ -7,24 +7,59 @@ function calcDynamicHeight(ref) {
     return objectWidth - vw + vh + 150 // ul margin-right
 }
 
-function onAlbumClick(audioId) {
-    // stop all audio + stop all spinning vinyls
-    augh.pause(); augh.currentTime = 0;
-    document.getElementById("aughVinyl").classList.remove("rotate")
+function clearPreviousAlbum(album) {
+    if (album == null) return
 
-    // play the music
-    const a = document.getElementById(audioId)
-    a.volume = 0.3
-    a.play()
+    const vinyl = album.children[0]
+    removeVinylAddedClasses(vinyl)
 
-    // spin the vinyl
-    document.getElementById(audioId + "Vinyl").classList.add("rotate")
+    const albumAudio = document.getElementById(album.id + "-audio")
+    albumAudio.pause()
+    albumAudio.currentTime = 0
+}
+
+function removeVinylAddedClasses(vinyl) {
+    vinyl.classList.remove("slide-out")
+    vinyl.classList.remove("slide-in")
+    vinyl.classList.remove("pin")
+    vinyl.classList.remove("rotate")
+}
+
+function onAlbumMouseEnter(album) {
+    if (activeAlbum != album) {
+        const vinyl = album.children[0]
+
+        removeVinylAddedClasses(vinyl)
+        vinyl.classList.add("slide-in")
+    }
+}
+
+function onAlbumMouseLeave(album) {
+    if (activeAlbum != album) {
+        const vinyl = album.children[0]
+
+        removeVinylAddedClasses(vinyl)
+        vinyl.classList.add("slide-out")
+    }
+}
+
+function onAlbumClicked(album) {
+    clearPreviousAlbum(activeAlbum)
+    activeAlbum = album
+
+    const vinyl = album.children[0]
+
+    removeVinylAddedClasses(vinyl)
+    vinyl.classList.add("pin")
+    vinyl.classList.add("rotate")
+
+    const albumAudio = document.getElementById(album.id + "-audio")
+    albumAudio.volume = 0.3
+    albumAudio.play()
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-    augh = document.getElementById('augh')
-
-    const pContainer = document.querySelector('.p-container')
+const pContainer = document.querySelector('.p-container')
     const horizontal = document.querySelector('.horizontal')
     pContainer.style.height = `${calcDynamicHeight(horizontal)}px`
 
@@ -36,7 +71,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.addEventListener('resize', () => {
         pContainer.style.height = `${calcDynamicHeight(horizontal)}px`
     })
-
-    // audio changes
-    document.getElementById("bgm").volume = 0.6;
 });
